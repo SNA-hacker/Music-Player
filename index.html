@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Music Player</title>
+</head>
+
+<body>
+  <!--  Navbar -->
+<nav class="main-navbar">
+  <h1>Melody Player</h1>
+
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search category...">
+    <div id="suggestions"></div>
+  </div>
+
+</nav>
+
+<!-- MAIN SECTION -->
+<main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+<h3>Library</h3>
+<ul>
+  <li data-action="home">Home</li>
+  <li data-action="browse">Browse</li>
+  <li data-action="discover">Discover</li>
+</ul>
+
+<h3>Your Music</h3>
+<ul>
+  <li data-action="favorites">Favorites</li>
+  <li data-action="recent">Recently Played</li>
+  <li data-action="liked">Liked Songs</li>
+  <li data-action="downloads">Downloads</li>
+</ul>
+
+<h3>Playlists</h3>
+<ul>
+  <li data-action="workout">Workout Mix</li>
+  <li data-action="chill">Chill Vibes</li>
+  <li data-action="study">Study Music</li>
+</ul>
+
+</aside>
+  <!-- RIGHT SIDE -->
+  <section class="content">
+
+      <div class="small-nav">
+<ul>
+<li class="active" data-category="all">🎵 All</li>
+<li data-category="chill">🌙 Chill</li>
+<li data-category="workout">🏋️ Workout</li>
+<li data-category="happy">😊 Happy</li>
+<li data-category="sad">😢 Sad</li>
+<li data-category="study">📚 Study</li>
+<li data-category="party">🎉 Party</li>
+</ul>
+</div>
+
+      <!-- SONG DISPLAY SECTION -->
+<section class="songs">
+
+<!-- Chill Songs 🌙 -->
+<div class="song-card chill" data-name="Chaandni Raatein">
+
+<div class="song-header">
+<span>🌙 Chill Mood 1</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/chill1.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/chill1.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card chill" data-name="Saahil Ki Hawa">
+
+<div class="song-header">
+<span>🌊Chill Mood 2 </span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/chill2.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/chill2.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card chill" data-name="Khwabon Ki Duniya">
+
+<div class="song-header">
+<span>🌸 Chill Mood 3</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/chill3.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/chill3.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<!-- Workout Songs 🏋️ -->
+<div class="song-card workout" data-name="Zor Ka Jhatka">
+
+<div class="song-header">
+<span>⚡Workout Mood 1</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/WorkOut1.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/WorkOut1.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card workout" data-name="Desi Beat">
+
+<div class="song-header">
+<span>🔥Workout Mood 2</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/WorkOut2.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/WorkOut2.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card workout" data-name="Energy Ka Booster">
+
+<div class="song-header">
+<span>🏋️ Workout Mood 3</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/WorkOut3.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/WorkOut3.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<!-- Happy Songs 😊 -->
+<div class="song-card happy" data-name="Mera Dil Khush">
+
+<div class="song-header">
+<span>🎵 Happy Mood 1</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/happy1.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/happy1.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card happy" data-name="Rangon Bhari Shaam">
+
+<div class="song-header">
+<span>💃 Happy Mood 2</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/happy2.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/happy2.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card happy" data-name="Hasna Muskaraana">
+
+<div class="song-header">
+<span>🎈 Happy Mood 3</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/happy3.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/happy3.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<!-- Sad Songs 😢 -->
+<div class="song-card sad" data-name="Dil Ka Dard">
+
+<div class="song-header">
+<span>🌧 Sad Mood 1</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/sad1.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/sad1.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card sad" data-name="Akela Safar">
+
+<div class="song-header">
+<span>🌑 Sad Mood 2</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/sad2.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/sad2.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card sad" data-name="Khamoshi">
+
+<div class="song-header">
+<span>🥀 Sad Mood 3</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/sad3.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/sad3.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<!-- Study Songs 📚 -->
+<div class="song-card study" data-name="Sitar Meditation">
+
+<div class="song-header">
+<span>🎹 Study Mood 1</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/study1.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/study1.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card study" data-name="Raag Yaman">
+
+<div class="song-header">
+<span>🎼 Study Mood </span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/study2.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/study2.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card study" data-name="Soft Piano Ghazal">
+
+<div class="song-header">
+<span>🕊 Study Mood 3</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/study3.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/study3.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<!-- Party Songs 🎉 -->
+<div class="song-card party" data-name="Desi Vibe">
+
+<div class="song-header">
+<span>🥳Party 1</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/party1.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/party1.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card party" data-name="Aaja Nachle">
+
+<div class="song-header">
+<span>🎤 Party 2 </span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/party2.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/party2.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+
+<div class="song-card party" data-name="Dil Dhadakne Do Remix">
+
+<div class="song-header">
+<span>💃 Party 3</span>
+<div class="song-actions">
+<button class="like-btn">❤️</button>
+<a href="songs/party3.mp3" download class="download-btn">⬇️</a>
+</div>
+</div>
+
+<audio controls>
+<source src="songs/party3.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</section>
+
+  </section>
+
+</main>
+
+<!-- LINK TO EXTERNAL SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>

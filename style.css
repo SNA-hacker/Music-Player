@@ -1,0 +1,263 @@
+:root{
+  --bg:#0a192f;
+  --sidebar:#112240;
+  --card:#1b2a49;
+  --accent:#3a86ff;
+  --hover:#4cc9f0;
+  --liked:#ff4d6d;
+  --text:#e6f1ff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* BODY */
+body{
+  background:var(--bg);
+  color:var(--text);
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  font-family:'Inter', sans-serif;
+
+}
+
+/*  NAVBAR */
+.main-navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:var(--accent);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.main-navbar h1{
+     text-shadow:2px 2px  var(--hover);
+}
+
+
+
+/* SEARCH BOX */
+.search-box{
+  position:relative;
+}
+
+#search{
+  padding:8px 12px;
+  border-radius:8px;
+  border:2px solid var(--text);
+  outline:none;
+  color:var(--text);
+  background:var(--card);
+}
+#search:hover , #search:focus{
+  border:2px solid var(--hover); 
+}
+
+/* SUGGESTION DROPDOWN */
+#suggestions{
+  position:absolute;
+  top:40px;
+  background:var(--hover);
+  width:100%;
+  border-radius:6px;
+  display:none;
+  flex-direction:column;
+  z-index:10;
+}
+
+#suggestions div{
+  padding:8px;
+  cursor:pointer;
+  color:var(--text);
+}
+
+#suggestions div:hover{
+  background:var(--hover);
+  color:black;
+}
+
+/* MAIN LAYOUT  */
+main{
+  display:grid;
+  grid-template-columns:240px 1fr;
+  height:calc(100vh - 60px); /* navbar height */
+}
+
+/* SIDEBAR */
+.sidebar{
+  background:var(--hover);
+  padding:15px;
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow-y:auto;
+  color:var(--text);
+}
+
+.sidebar h3{
+  color:var(--accent);
+  font-size:20px;
+  font-weight:bolder;
+  margin-top:20px;
+  margin-bottom:5px;
+  text-shadow: 2px 2px 5px var(--text)
+}
+
+.sidebar ul{
+  list-style:none;
+}
+
+.sidebar li{
+  padding:8px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.sidebar li:hover{
+  background:var(--accent);
+  color:black;
+}
+
+.sidebar li.active{
+  background:var(--accent);
+  color:black;
+}
+
+/* CONTENT AREA */
+.content{
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  overflow-y:auto;
+  color:var(--text);
+}
+
+/* CATEGORY NAV */
+.small-nav{
+  position:sticky;
+  top:0; 
+  z-index:90;
+  background:var(--bg);
+  display: flex;
+  justify-content: start;
+  align-items:center;
+  padding:10px;
+}
+
+.small-nav ul{
+  display:flex;
+  gap:10px;
+}
+
+.small-nav li{
+  list-style:none;
+  padding:6px 14px;
+  border-radius:6px;
+  cursor:pointer;
+  background:var(--accent);
+  transition:0.3s;
+  color:var(--text);
+}
+
+.small-nav li:hover{
+  background:var(--hover);
+  color:black;
+}
+
+.small-nav li.active{
+  background:var(--hover);
+  color:black;
+}
+
+/*SONG LIST */
+.songs{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  flex:1; 
+  overflow-y:auto;
+  padding-right:10px;
+}
+
+/* SONG CARD */
+.song-card{
+  background:var(--card);
+  padding:15px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition:0.3s;
+  color:var(--text);
+}
+
+.song-card:hover{
+  background:var(--accent);
+  transform:translateY(-3px);
+}
+
+/* PLAYING SONG EFFECT */
+.song-card.playing{
+  background:var(--hover);
+  color:black;
+  box-shadow:0 0 10px var(--hover);
+  transform:scale(1.02);
+}
+
+audio{
+  width:100%;
+}
+
+/* SONG HEADER ACTIONS */
+.song-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.song-actions button,
+.song-actions a{
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-size:18px;
+  margin-left:5px;
+  color:var(--text);
+  transition:0.3s;
+}
+
+.song-actions button.liked{
+  color:var(--liked);
+}
+
+.song-actions button:hover,
+.song-actions a:hover{
+  color:var(--hover);
+}
+
+/*  SCROLLBAR */
+.songs::-webkit-scrollbar{
+  width:8px;
+}
+
+.songs::-webkit-scrollbar-thumb{
+  background:var(--accent);
+  border-radius:10px;
+}
+
+.sidebar::-webkit-scrollbar{
+  width:6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+  background:var(--hover);
+  border-radius:10px;
+}
